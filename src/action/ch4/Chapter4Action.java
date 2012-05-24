@@ -18,6 +18,10 @@ import service.ch4.Chapter4Service;
 public class Chapter4Action extends ActionSupport {
 	private Logger logger = Logger.getLogger(this.getClass());
 	private Chapter4Service chapter4Service;
+	
+	
+	
+	
 
 	public Chapter4Service getChapter4Service() {
 		return chapter4Service;
