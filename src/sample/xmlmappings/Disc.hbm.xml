@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  package="sample.entity" > 
+  <class name="Disc"> 
+  	<id name="id"  type="long">
+		 <generator class="sequence"/>
+	</id>
+    <property name="name" type="string" />
+    <property name="price" type="integer"/>
+    <union-subclass name="AudioDisc" table="AUDIO_DISC">
+    	<property name="singer"  type="string"/>
+    	<property name="numOfSongs" type="integer"/>
+    </union-subclass>
+    <union-subclass name="VideoDisc" table="VIDEO_DISC">
+    	<property name="directory"  type="string"/>
+    	<property name="language"  type="string"/>
+    </union-subclass>
+  </class> 
+</hibernate-mapping> 

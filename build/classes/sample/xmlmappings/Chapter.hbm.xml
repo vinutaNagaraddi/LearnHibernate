@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  package="sample.entity" > 
+  <class name="Chapter" table="CHAPTER" dynamic-insert="true" dynamic-update="true"> 
+  	<id name="id"  type="long">
+		<generator class="native"/>
+	</id>
+    <property name="title" type="string" column="TITLE" />
+    <property name="noOfPages" type="integer" column="NO_OF_PAGES" />
+    <set name="books" table="BOOK_CHAPTER" inverse="true" cascade="save-update">
+    	<key column="CHAPTER_ID"/>
+    	<many-to-many column="BOOK_ID" class="Book"/>
+    </set>
+  </class> 
+</hibernate-mapping> 

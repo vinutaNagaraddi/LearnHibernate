@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+
+	<package name="basicPackage" extends="struts-default">
+	
+		<action name="hello" class="helloWorldAction">
+			<result>/jsp/HelloWorldTest.jsp</result>
+		</action>
+		<action name="ch3" class="chapterThreeAction">
+			<result>/jsp/ch3/PopulateValues.jsp</result>
+		</action>
+		<action name="populateMessages" class="chapterThreeAction" method="populateMessages">
+			<result>/jsp/ch3/PopulateValues.jsp</result>
+		</action>
+		<action name="populateUsers" class="chapterThreeAction" method="populateUsers">
+			<result>/jsp/ch3/PopulateValues.jsp</result>
+		</action>
+		<action name="populateCategories" class="chapterThreeAction" method="populateCategories">
+			<result>/jsp/ch3/PopulateValues.jsp</result>
+		</action>
+		<action name="populateAdverts" class="chapterThreeAction" method="populateAdverts">
+			<result>/jsp/ch3/PopulateValues.jsp</result>
+		</action>
+		<action name="populateCustomers" class="chapterThreeAction" method="populateCustomers">
+			<result>/jsp/ch3/PopulateValues.jsp</result>
+		</action>
+		<action name="getCustomer" class="chapterThreeAction" method="getCustomer">
+			<result>/jsp/ch3/PopulateValues.jsp</result>
+		</action>
+		<action name="populateAddresses" class="chapterThreeAction" method="populateAddresses">
+			<result>/jsp/ch3/PopulateValues.jsp</result>
+		</action>
+		<action name="ch4" class="chapterThreeAction">
+			<result>/jsp/ch4/PopulateValues.jsp</result>
+		</action>
+		<action name="populateOrders" class="chapterThreeAction" method="populateOrders">
+			<result>/jsp/ch3/PopulateValues.jsp</result>
+		</action>
+		<action name="populateVideoDiscs" class="chapter4Action" method="populateVideoDiscs">
+			<result>/jsp/ch4/PopulateValues.jsp</result>
+		</action>
+		<action name="populateAudioDiscs" class="chapter4Action" method="populateAudioDiscs">
+			<result>/jsp/ch4/PopulateValues.jsp</result>
+		</action>
+		<action name="getDiscs" class="chapter4Action" method="getDiscs">
+			<result>/jsp/ch4/PopulateValues.jsp</result>
+		</action>
+		<action name="populateBooks" class="chapter4Action" method="populateBooks">
+			<result>/jsp/ch4/PopulateValues.jsp</result>
+		</action>
+		<action name="getBooks" class="chapter4Action" method="getBooks">
+			<result>/jsp/ch4/PopulateValues.jsp</result>
+		</action>
+		<action name="ch6and7" class="chapter6and7Action">
+			<result>/jsp/ch6and7/PopulateValues.jsp</result>
+		</action>
+		<action name="populateCh6and7Books" class="chapter6and7Action" method="populateBooks">
+			<result>/jsp/ch6and7/PopulateValues.jsp</result>
+		</action>
+		<action name="getCh6and7Books" class="chapter6and7Action" method="getBooks">
+			<result>/jsp/ch6and7/PopulateValues.jsp</result>
+		</action>
+    </package>
+</struts>

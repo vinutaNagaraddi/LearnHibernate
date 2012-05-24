@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  package="sample.entity" > 
+  <class name="Customer" table="CUSTOMER" dynamic-insert="true" dynamic-update="true"> 
+    <id name="id" type="long">
+    	<generator class="native"/>
+    </id>
+    <property name="lastName" type="string"/>
+    <property name="firstName" type="string"/>
+    <join table="CUSTOMERADDRESS" optional="true">
+    	<key column="ID" unique="true"/>
+    	<many-to-one name="address" column="ADDRESS_ID" class="Address" cascade="all" 
+    	not-null="true" unique="true"/>
+    </join>
+    
+  </class> 
+</hibernate-mapping> 
